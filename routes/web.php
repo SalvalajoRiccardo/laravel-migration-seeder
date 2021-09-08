@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','TripController@index')->name('homepage');
+
+Route::get('/detail/{key}','TripController@show')->name('dettagli');
